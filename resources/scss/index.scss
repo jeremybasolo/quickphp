@@ -1,0 +1,15 @@
+// Some random fonts, to be changed on a real project
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
+@import './bootstrap/custom-variables';
+@import './bootstrap/custom-bootstrap';
+
+body {
+    padding-top: 40px;
+}
+
+strong {
+    background: black;
+    color: #00ff00;
+    padding: 2px;
+}
