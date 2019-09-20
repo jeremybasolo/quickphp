@@ -1,21 +1,20 @@
-# Lumen PHP Framework
+# Quick PHP
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+This is a basic PHP website using [Lumen](https://lumen.laravel.com), [Parcel JS](https://parceljs.org) and [Bootstrap](https://getbootstrap.com). It is meant to build very easy websites, such as holding pages, not requiring a CMS or anything too complex but still needing a dynamic back-end language.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Here is how it is structured:
 
-## Official Documentation
+*   **public/** is where your virtualhost should point at.
+*   **routes/** is where all the routes and the logic is. You most likely want to add some php code in web.php.
+*   **views/** is where all the views are. These are to be rendered in routes.
+*   **resources/js/** is where your javascript lives. index.js is the entry point.
+*   **resources/scss/** is where your sass lives. In bootstrap/_custom-bootstrap.scss, you can include the bootstrap components that you want. In bootstrap/_custom-variables.scss, you can overwrite the bootstrap variables.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+To install, clone the repository, create a .env file based on .env.example, run **composer install**, then run **npm install** and that's it, you should be good to go.
 
-## Security Vulnerabilities
+To use it, amend the code as necessary in the routes, views, js and scss. You can run two commands:
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+*   **npm run build**: this will compile everything. To be run before a commit or a deployment.
+*   **npm run watch**: that will watch for changes in resources/, recompile everything and reload the browser.
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+To install new dependencies, just use **npm install** with --save or --save-dev.
